@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    animation: changeBackgroundColor 10s linear infinite alternate; /* Add the background color animation */
+    background-color: #5680E9; /* Initial background color */
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #5680E9; /* Initial background color */
+    }
+    20% {
+        background-color: #84CEEB; /* Color at 20% of the animation */
+    }
+    40% {
+        background-color: #5AB9EA; /* Color at 40% of the animation */
+    }
+    60% {
+        background-color: #C1C8E4; /* Color at 60% of the animation */
+    }
+    80% {
+        background-color: #8860D0; /* Color at 80% of the animation */
+    }
+    100% {
+        background-color: #5680E9; /* Back to the initial background color */
+    }
+}
+
+label{
+    font-size: 30px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+form {
+    max-width: 700px;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.input-container {
+    background-color: #5680E9; /* Initial background color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: background-color 0.5s ease; /* Smooth background color transition */
+}
+
+/* Updated styles for the textarea */
+textarea {
+    opacity: 0.8;
+    width: 100%;
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #bfcbd5;
+    border-radius: 5px;
+    background-color: #d0e7f5;
+    color: #333333;
+    resize: vertical; /* Disable textarea resizing */
+}
+
+.button-container {
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #659DBD;
+    color: #FBEEC1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #8D8741;
+}
+
+/* Add a CSS animation for the input-container background color */
+.input-container:hover {
+    background-color: #84CEEB;
+}
+
+.input-container:hover ~ .input-container {
+    background-color: #5AB9EA;
+}
+
+.input-container:hover ~ .input-container ~ .input-container {
+    background-color: #C1C8E4;
+}
+
+.input-container:hover ~ .input-container ~ .input-container ~ .input-container {
+    background-color: #8860D0;
+}
+
+
+.result-container {
+    width: 30%;
+    animation: slideIn 1s; /* Slide in animation for result container */
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #000000;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.animated {
+    will-change: opacity;
+    background-color: #290091;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: fadeInOut 2s ease-in-out infinite;
+    opacity: 0;
+    color: #FBEEC1;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+

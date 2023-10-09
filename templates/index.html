@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html>
+<head>
+    <title>Email Classification</title> <!-- Sets the title of the webpage to "Email Classification" -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Includes an external CSS stylesheet named 'style.css' using Flask's 'url_for' function -->
+</head>
+<body>
+    <div class="background-image">
+        <div class="content">
+            <h1>Email Classification</h1> <!-- Displays a heading with the text "Email Classification" -->
+            <form method="POST">
+                <!-- Starts a form with the HTTP method 'POST' -->
+                <div class="input-container">
+                    <label for="email_text">Enter Email Text:</label>
+                    <!-- Provides a label for the textarea input field -->
+                    <textarea name="email_text" id="email_text" rows="6" cols="50"></textarea>
+                    <!-- Creates a textarea input field for entering email text -->
+                </div>
+                <div class="button-container">
+                    <input type="submit" value="Classify">
+                    <!-- Displays a submit button with the label "Classify" -->
+                </div>
+            </form>
+            <div class="result-container">
+                {% if result %}
+                <!-- Checks if a variable named 'result' exists -->
+                    <h2>Result:</h2> <!-- Displays a subheading with the text "Result:" -->
+                    <p class="animated">{{ result }}</p>
+                    <!-- Displays the content of the 'result' variable within a paragraph element -->
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
